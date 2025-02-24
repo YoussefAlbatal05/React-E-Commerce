@@ -9,9 +9,11 @@ const CheckOut = () => {
     const counterInOrderSummary = cartItems.reduce((acc , item) => acc + item.quantity , 0 );
 
     return(
-        <div className="container d-flex mt-5">
+        <div className="container mt-4">
 
-            <div className="d-flex row flex-column col-xl-7 col-lg-8 col-sm-6 col-md-5 align-items-start card border border-2">
+          <div className="row flex-column flex-md-row">  
+
+            <div className="col-12 col-md-7 mb-4 border border-2 rounded border-gray mx-auto" style={{ maxWidth: "95%" }}>
                  
                  <h2 className="mb-4 mt-3 card-text fw-bold">Billing-Address</h2>
 
@@ -118,20 +120,28 @@ const CheckOut = () => {
                 </div>
              </div>
 
-            <div className="d-flex flex-column col-xl-5 col-lg-4 col-sm-6 col-md-6 mx-5">
-                <div className="priceSummary">
-                        <div className="card border border-2">
-                             <h2 className="card-text fw-bold p-3">Order Summary </h2> 
-                             <hr className="w-100 my-0"/>
-                             <div className="card-body text-center">
-                             <h4 className="card-text text-start d-flex justify-content-between mb-3 my-2"> <span >Products ({counterInOrderSummary}) </span>  <span>  $ {summaryPrice.toFixed(1)} </span> </h4>
-                             <h4 className="card-text mb-3 d-flex justify-content-between"><span>Shipping</span>  <span>$ 30</span></h4>              
-                             <h4  className="card-text text-start d-flex justify-content-between"> <span className="text-nowrap">Total Amount</span>  <span> $ {totalPrice.toFixed(1)} </span> </h4>
-                             </div>
+
+             <div className="col-12 col-md-5 mb-3">
+                   <div className="card border border-2">
+                        <h2 className="card-text fw-bold p-3">Order Summary</h2>
+                        <hr className="w-100 my-0" />
+                        <div className="card-body text-center">
+                            <h4 className="card-text text-start d-flex justify-content-between mb-3 my-2">
+                                <span>Products ({counterInOrderSummary})</span> <span>$ {summaryPrice.toFixed(1)}</span>
+                            </h4>
+                            <h4 className="card-text mb-3 d-flex justify-content-between">
+                                <span>Shipping</span> <span>$30</span>
+                            </h4>
+                            <h4 className="card-text text-start d-flex justify-content-between">
+                                <span className="text-nowrap">Total Amount</span> <span>$ {totalPrice.toFixed(1)}</span>
+                            </h4>
+
                         </div>
-                </div>
+                    </div>
              </div>
 
+          </div>
+            
         </div>
     )
 
