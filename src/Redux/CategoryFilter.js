@@ -8,9 +8,9 @@ const categories = ["all", "electronics", "jewelery", "men's clothing", "women's
 
 const CategoryFilter = ({ setCategory , selectedCategory }) => {
     return (
-        <div className="d-flex justify-content-center pt-3 button">
+        <div className="d-flex flex-wrap justify-content-center pt-3 button">
             {categories.map((cat) => (
-                <button  key={cat} onClick={() => setCategory(cat)} className={`btn mx-2 ${selectedCategory === cat ? "btn-dark" : "btn-outline-dark" }`}>
+                <button  key={cat} onClick={() => setCategory(cat)} className={`btn my-2 mx-2 ${selectedCategory === cat ? "btn-dark" : "btn-outline-dark" }`}>
                     {cat}
                 </button>
             ))}
