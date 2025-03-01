@@ -11,9 +11,10 @@ import Register from "./Pages/Register";
 import ProductDetails from './Pages/ProductDetails';
 import CheckOut from './Pages/CheckOut';
 import { Toaster } from 'react-hot-toast';
-
+import Contact from './Pages/Contact';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import About from './Pages/About';
 
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
     <BrowserRouter>
 
             <Routes>
-
                 <Route path="/" element={<Home/>} />
                 <Route path="/products" element={<Product/>} />
                 <Route path="/product/:id" element={<ProductDetails/>} />
@@ -32,7 +32,8 @@ function App() {
                 <Route path="/register" element={<Register/>} />
                 <Route path="/cart" element={<Cart/>} />
                 <Route path="/checkout" element={<CheckOut/>} />
-
+                <Route path="/about" element={<About/>} />
+                <Route path="/contact" element={<Contact/>}/>
             </Routes>
 
     </BrowserRouter>

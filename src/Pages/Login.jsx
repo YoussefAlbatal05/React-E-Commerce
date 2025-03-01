@@ -63,7 +63,7 @@ const Login = () => {
 
                         <h5>New Here? <Link to="/register">Register</Link></h5>
 
-                        <button type="submit" className="btn btn-secondary mt-3">Login</button>
+                        <button type="submit" className="btn btn-secondary mt-4 d-block mx-auto px-3">Login</button>
                     </form>
                 </div>
             </div>

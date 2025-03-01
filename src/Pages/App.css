@@ -1,0 +1,15 @@
+
+.about-card{
+  transition: 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: scale(1.1);  /* Slightly enlarge card */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
