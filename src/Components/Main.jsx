@@ -6,16 +6,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const Main = () => {
 
     return(
-        <div className="hero container-fluid mt-3 text-white card border-0">
+        <div className="card container-fluid mt-4 text-white border-0 min-vh-50 custom-main-height">
 
-              <img src="/Assets/main.png.jpg" className="img-fluid card-img"/>
+              <img src="/Assets/main.png.jpg" className="img-fluid card-img custom-main-height"/>
 
                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-start container">
-                  <p class="h1 card-title fs-1">New Season Arrivals</p>
-                  <p class="fs-4 d-sm-block d-none">
-                   This is a wider card with supporting text below as a natural
-                   lead-in to additional content. This content is a little bit
-                   longer.
+                  <p class="h1 card-title fs-1 container">New Season Arrivals</p>
+                  <p class="fs-4 d-sm-block d-none container">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, tempora modi ipsum fuga dolor nemo aspernatur fugiat accusamus.
                    </p>
                </div>
 

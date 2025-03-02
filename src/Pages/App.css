@@ -13,3 +13,12 @@ img {
   display: block;
 }
 
+
+
+
+
+@media (max-width: 576px) {
+  .custom-main-height {
+    height: 35vh; /* Even larger on very small screens */
+  }
+}
