@@ -6,6 +6,7 @@ import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from "react-redux";
+import { FaShoppingBag } from "react-icons/fa";
 
 
 
@@ -22,7 +23,7 @@ const Navbar = () => {
 
  <div className="container">
 
-  <NavLink className="navbar-brand fw-bold fs-3 px-3 py-3" to="/">React E-commerce</NavLink>
+  <NavLink className="navbar-brand fw-bold fs-3 px-3 py-3 d-flex align-items-center" to="/">React E-commerce <FaShoppingBag className="ms-2 fs-3"/> </NavLink>
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
     <span className="navbar-toggler-icon"></span>
   </button>
