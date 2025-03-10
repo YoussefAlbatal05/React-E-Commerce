@@ -14,9 +14,6 @@ img {
 }
 
 
-
-
-
 @media (max-width: 576px) {
   .custom-main-height {
     height: 30vh; /* Even larger on very small screens */

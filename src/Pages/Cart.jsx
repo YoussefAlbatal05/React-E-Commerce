@@ -13,11 +13,10 @@ const Cart = () => {
 
     return (
         <div className="container mt-5">
-            {/* Main Row: Products + Order Summary */}
+
             <div className="row flex-column-reverse flex-md-row">  
             
-                {/* Order Summary (Always Below Products on Small Screens) */}
-                <div className="col-12 col-md-4 mb-4">
+                <div className="col-12 col-md-5 mb-4">
                     <div className="card border border-2">
                         <h2 className="card-text fw-bold p-3">Order Summary</h2>
                         <hr className="w-100 my-0" />
@@ -38,14 +37,11 @@ const Cart = () => {
                     </div>
                 </div>
 
-                {/* Products Section (Takes Full Width on Small Screens) */}
-                <div className="col-12 col-md-8">
-                    {cartItems.length === 0 ? (
-                        <h4 className="text-center mt-4">Cart is empty</h4>
-                    ) : (
+                <div className="col-12 col-md-7">
+                    {cartItems.length === 0 ? ( <h4 className="text-center mt-4 p-4 fw-bold fs-1">Cart is empty!</h4> ) : (
                         cartItems.map((item) => (
                             <div key={item.id} className="d-flex row justify-content-between align-items-center border border-3 border-secondary rounded-2 p-4 mb-3 col-10 mx-auto col-md-12">
-                                <div className="col-lg-2 col-md-12 col-sm-12 text-center">
+                                <div className="col-lg-2 col-md-12 col-sm-12 text-center d-flex justify-content-center">
                                     <img src={item.image} alt={item.title} style={{ width: "100px" }} />
                                 </div>
                                 <div className="col-lg-3 col-sm-12 text-center">
@@ -79,7 +75,7 @@ const Cart = () => {
                     )}
                 </div>
 
-            </div> {/* End of Row */}
+            </div> 
         </div>
     );
 };
