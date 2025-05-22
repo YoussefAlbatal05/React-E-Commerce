@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const { id } = useParams()
     const { items } = useSelector((state) => state.products) // Get all products from Redux store , The useSelector hook allows you to access the state stored in Redux. ,  items is an array that holds all the products fetched from the API in ProdutSlice.js
     const dispatch = useDispatch()
-    
+    const navigate = useNavigate();
 
     
     const product = items.find((p) => p.id === Number(id)) // here we are getting the product id which we got from the useParams() ,  id is coming from React Router (useParams())  which returns URL parameters as strings. so we used Number to convert it to numbers
@@ -43,7 +43,7 @@ const ProductDetails = () => {
                             <h6 className="fw-light">{product.description}</h6>
                             <div className="py-3">
                                 <button className="btn btn-outline-dark border-2 me-2" onClick={() => { dispatch(addToCart(product))}}>Add To Cart</button>
-                                <button className="btn btn-dark">Go To Cart</button>
+                                <button className="btn btn-dark" onClick={() => navigate("/cart")}>Go To Cart</button>
                             </div>
                     </div>
                  </div>
@@ -61,11 +61,11 @@ const ProductDetails = () => {
                                          <img src={item.image} alt={item.title} className="card-image-top" style={{height:"350px"}} />
                                              <h5 className="text-center fw-bold mt-3">{item.title.length > 13 ? item.title.slice( 0 , 13 ) + "..." : item.title }</h5>
                                                 <div className="py-2 text-center">
-                                                    <button className="btn btn-dark me-2">Add To Cart</button>
+                                                    <button className="btn btn-dark me-2" onClick={() => { dispatch(addToCart(item))}}>Add To Cart</button>  
                                                     <button className="btn btn-dark">Go To Cart</button>
                                                 </div>
                                     </div>
-                                </div>
+                                </div>  //  <button className="btn btn-dark me-2" onClick={() => { dispatch(addToCart(item))}}>Add To Cart</button>  ,  item here represents the specific product you clicked on
                         ) ) }
 
                     </div> 
